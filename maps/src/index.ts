@@ -1,9 +1,10 @@
 // import { Company } from "./Company";
 // import { User } from "./User";
 
-const mapContainer = document.getElementById("map");
-if (mapContainer) {
-  new google.maps.Map(mapContainer, {
+const mapElement = document.getElementById("map");
+
+if (mapElement) {
+  new google.maps.Map(mapElement, {
     zoom: 1,
     center: {
       lat: 0,
