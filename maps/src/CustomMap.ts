@@ -1,8 +1,8 @@
 class CustomMap {
   private googleMap: google.maps.Map;
 
-  constructor() {
-    const mapElement = document.getElementById("map");
+  constructor(divId: string) {
+    const mapElement = document.getElementById(divId);
 
     if (mapElement) {
       this.googleMap = new google.maps.Map(mapElement, {
