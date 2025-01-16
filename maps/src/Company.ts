@@ -9,7 +9,7 @@ class Company {
   };
 
   constructor() {
-    this.name = faker.company.companyName();
+    this.name = faker.company.name();
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
