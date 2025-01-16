@@ -598,7 +598,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"h7u1C":[function(require,module,exports,__globalThis) {
 // import { Company } from "./Company";
 // import { User } from "./User";
-new google.maps.Map(document.getElementById("map"), {
+const mapContainer = document.getElementById("map");
+if (mapContainer) new google.maps.Map(mapContainer, {
     zoom: 1,
     center: {
         lat: 0,
