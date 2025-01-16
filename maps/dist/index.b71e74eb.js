@@ -598,14 +598,56 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"h7u1C":[function(require,module,exports,__globalThis) {
 // import { Company } from "./Company";
 // import { User } from "./User";
-const mapElement = document.getElementById("map");
-if (mapElement) new google.maps.Map(mapElement, {
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
+var _customMap = require("./CustomMap");
+new (0, _customMap.CustomMap)();
+
+},{"./CustomMap":"4qzxZ"}],"4qzxZ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CustomMap", ()=>CustomMap);
+class CustomMap {
+    constructor(){
+        const mapElement = document.getElementById("map");
+        if (mapElement) this.googleMap = new google.maps.Map(mapElement, {
+            zoom: 1,
+            center: {
+                lat: 0,
+                lng: 0
+            }
+        });
+        else throw new Error("Map element not found");
     }
-});
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"kXT1Y"}],"kXT1Y":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["kQWAR","h7u1C"], "h7u1C", "parcelRequire94c2")
 
