@@ -1,3 +1,14 @@
+// import { User } from "./User";
+// import { Company } from "./Company";
+
+// instructions to every other class
+interface Mappable {
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
+
 class CustomMap {
   private googleMap: google.maps.Map;
 
@@ -15,6 +26,16 @@ class CustomMap {
     } else {
       throw new Error("Map element not found");
     }
+  }
+
+  addMarker(mappable: Mappable): void {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: mappable.location.lat,
+        lng: mappable.location.lng,
+      },
+    });
   }
 }
 
