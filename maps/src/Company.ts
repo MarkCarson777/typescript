@@ -18,7 +18,7 @@ class Company {
   }
 
   markerContent(): string {
-    return `Company: ${this.name}`;
+    return `<div><p>Company: ${this.name}</p><p>${this.catchPhrase}</p></div>`;
   }
 }
 
