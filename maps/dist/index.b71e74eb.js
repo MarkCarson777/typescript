@@ -602,6 +602,9 @@ var _customMap = require("./CustomMap");
 new (0, _customMap.CustomMap)("map");
 
 },{"./CustomMap":"4qzxZ"}],"4qzxZ":[function(require,module,exports,__globalThis) {
+// import { User } from "./User";
+// import { Company } from "./Company";
+// instructions to every other class
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CustomMap", ()=>CustomMap);
@@ -616,6 +619,15 @@ class CustomMap {
             }
         });
         else throw new Error("Map element not found");
+    }
+    addMarker(mappable) {
+        new google.maps.Marker({
+            map: this.googleMap,
+            position: {
+                lat: mappable.location.lat,
+                lng: mappable.location.lng
+            }
+        });
     }
 }
 
