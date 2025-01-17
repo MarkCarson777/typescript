@@ -4,6 +4,7 @@ interface Mappable {
     lng: number;
   };
   markerContent(): string;
+  color: string;
 }
 
 class CustomMap {
@@ -44,4 +45,4 @@ class CustomMap {
   }
 }
 
-export { CustomMap };
+export { CustomMap, Mappable };
