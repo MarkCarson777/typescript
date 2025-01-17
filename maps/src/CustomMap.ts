@@ -1,7 +1,3 @@
-// import { User } from "./User";
-// import { Company } from "./Company";
-
-// instructions to every other class
 interface Mappable {
   location: {
     lat: number;
