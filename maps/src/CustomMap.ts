@@ -4,7 +4,10 @@ interface Mappable {
     lng: number;
   };
   markerContent(): string;
+<<<<<<< HEAD
   color: string;
+=======
+>>>>>>> 554481eb844256e65a3c4fd95bd17ae26e32f307
 }
 
 class CustomMap {
@@ -45,4 +48,8 @@ class CustomMap {
   }
 }
 
+<<<<<<< HEAD
 export { CustomMap, Mappable };
+=======
+export { CustomMap };
+>>>>>>> 554481eb844256e65a3c4fd95bd17ae26e32f307
