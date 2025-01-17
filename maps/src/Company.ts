@@ -20,7 +20,7 @@ class Company implements Mappable {
   }
 
   markerContent(): string {
-    return `<div><p>Company: ${this.name}</p><p>${this.catchPhrase}</p></div>`;
+    return `<div><p>Company:${this.name}</p><p>${this.catchPhrase}</p></div>`;
   }
 }
 
