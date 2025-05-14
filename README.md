@@ -1,1 +1,1 @@
-# typescript-demos
+# typescript
